@@ -1,0 +1,19 @@
+{
+  "name": "elixir-program-challenge",
+  "version": "0.0.0",
+  "description": "go to https://gist.github.com/programa-elixir/1bd50a6d97909f2daa5809c7bb5b9a8a to learn more",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegolopes98/shopping-amount-calc.git"
+  },
+  "author": "Diego Lopes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegolopes98/shopping-amount-calc/issues"
+  },
+  "homepage": "https://github.com/diegolopes98/shopping-amount-calc#readme"
+}
