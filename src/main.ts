@@ -7,10 +7,11 @@ import { sumReducer } from './utils/reducers'
 import { mapItemAmount } from './data/usecases/map-item-amount'
 import { fixAmountSumStrategy } from './data/usecases/fix-amount-sum-strategy'
 import { createPaymentMap } from './data/usecases/create-payment-map'
+import { roundingFloor } from './utils/math/roundings/floor'
 
 const customersAmount = getCustomersAmount(emails)
 const totalAmount = getTotalAmount(items, mapItemAmount, sumReducer)
-const amountByCustomer = getAmountByCostumer(totalAmount, customersAmount)
+const amountByCustomer = getAmountByCostumer(totalAmount, customersAmount, roundingFloor)
 const amountByCustomerFixed = fixAmountByCustomer(amountByCustomer, customersAmount, totalAmount, sumReducer, fixAmountSumStrategy)
 const paymentMap = createPaymentMap(emails, amountByCustomerFixed)
 

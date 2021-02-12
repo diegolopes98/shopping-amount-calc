@@ -1,2 +1,2 @@
-export const getAmountByCostumer = (totalAmount: number, customersAmount: number): number =>
-  Math.floor(totalAmount / customersAmount)
+export const getAmountByCostumer = (totalAmount: number, customersAmount: number, roundingFn: (value: number) => number): number =>
+  roundingFn(totalAmount / customersAmount)
