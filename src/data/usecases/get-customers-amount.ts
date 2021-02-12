@@ -1,1 +1,1 @@
-export const getCustomersAmount = (emails): number => emails.length
+export const getCustomersAmount = (list): number => list.length
