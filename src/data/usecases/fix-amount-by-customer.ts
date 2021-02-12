@@ -2,7 +2,7 @@ export const fixAmountByCustomer = (
   amountPerCustomer: number,
   customersAmount: number,
   targetAmount: number,
-  reducerFn: (previousValue: number, currentValue: number, currentIndex: number, array: number[]) => number
+  reducerFn: (previousValue: number, currentValue: number) => number
 ): number[] => {
   const amountArray = [...Array(customersAmount)].fill(amountPerCustomer)
   if (amountPerCustomer * customersAmount === targetAmount) return amountArray
@@ -12,7 +12,7 @@ export const fixAmountByCustomer = (
 const fix = (
   targetAmount: number,
   amountArray: number[],
-  reducerFn: (previousValue: number, currentValue: number, currentIndex: number, array: number[]) => number,
+  reducerFn: (previousValue: number, currentValue: number) => number,
   idx: number = amountArray.length - 1
 ): number[] => {
   if (amountArray.reduce(reducerFn) === targetAmount) return amountArray
