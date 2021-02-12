@@ -1,4 +1,4 @@
-import Item from '../protocols/item'
+import { Item } from '../domain/models'
 
 export const items: Item[] = [
   {
@@ -8,7 +8,7 @@ export const items: Item[] = [
   },
   {
     name: 'Produto de teste 2',
-    quantity: 3,
+    quantity: 4,
     amount: 100
   },
   {
