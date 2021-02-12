@@ -16,6 +16,7 @@ export const intro = (nextStep: () => void = null): void => {
   })
 
   input.on('close', () => {
+    console.clear()
     if (nextStep) nextStep()
     process.exit(0)
   })
