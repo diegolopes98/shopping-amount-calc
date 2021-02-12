@@ -4,6 +4,8 @@
   "description": "go to https://gist.github.com/programa-elixir/1bd50a6d97909f2daa5809c7bb5b9a8a to learn more",
   "main": "main.js",
   "scripts": {
+    "start": "node ./dist/main.js",
+    "build": "rimraf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/diegolopes98/shopping-amount-calc/issues"
   },
-  "homepage": "https://github.com/diegolopes98/shopping-amount-calc#readme"
+  "homepage": "https://github.com/diegolopes98/shopping-amount-calc#readme",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "@types/node": "^14.14.27",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "eslint": "^7.19.0",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {}
 }
