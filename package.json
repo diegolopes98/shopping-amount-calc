@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "node ./dist/main.js",
+    "build:watch": "npm run build -- -w",
     "build": "rimraf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
