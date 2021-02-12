@@ -1,4 +1,4 @@
-export const emails: String[] = [
+export const emails: string[] = [
   'mail@mail.com',
   'mail2@mail.com',
   'mail3@mail.com',
