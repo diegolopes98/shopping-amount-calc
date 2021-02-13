@@ -18,8 +18,7 @@ const fix = (
   idx: number = amountArray.length - 1
 ): number[] => {
   if (amountArray.reduce(reducerFn) === targetAmount) return amountArray
-  const newAmountArray = [...amountArray]
-  newAmountArray[idx] += 1
+  const newAmountArray = fixStrategy([...amountArray], idx)
   const newIdx = idx < 0 ? newAmountArray.length - 1 : idx - 1
   return fix(targetAmount, newAmountArray, reducerFn, fixStrategy, newIdx)
 }
