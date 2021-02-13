@@ -1,4 +1,4 @@
-import { Amount } from '../../domain/models'
+import { Amount } from '../../../protocols'
 
 export const createPaymentMap = (emails: string[], amounts: number[]): Amount => {
   const paymentMap: Amount = {}
