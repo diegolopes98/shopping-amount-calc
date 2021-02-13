@@ -1,4 +1,4 @@
-import { createPaymentMap, fixAmountByCustomer, fixAmountSumStrategy, getAmountByCostumer, getCustomersAmount, getTotalAmount, mapItemAmount } from './helpers'
+import { createPaymentMap, fixAmountByCustomer, fixAmountSumStrategy, getAmountByCostumer, getCustomersAmount, getTotalAmount, mapItemPrice } from './helpers'
 import { Amount, Item } from '../../protocols'
 import { roundingFloor } from '../../../utils/math/roundings'
 import { sumReducer } from '../../../utils/reducers'
@@ -28,7 +28,7 @@ export const getDataAmountCalculatedPresenter = (
   }
 
   const customersAmount = getCustomersAmount(emails)
-  const totalAmount = getTotalAmount(items, mapItemAmount, sumReducer)
+  const totalAmount = getTotalAmount(items, mapItemPrice, sumReducer)
   const amountByCustomer = getAmountByCostumer(totalAmount, customersAmount, roundingFloor)
   const amountByCustomerFixed = fixAmountByCustomer(amountByCustomer, customersAmount, totalAmount, sumReducer, fixAmountSumStrategy)
   return createPaymentMap(emails, amountByCustomerFixed)
