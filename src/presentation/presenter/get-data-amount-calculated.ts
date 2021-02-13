@@ -1,17 +1,11 @@
+import { createPaymentMap, fixAmountByCustomer, fixAmountSumStrategy, getAmountByCostumer, getCustomersAmount, getTotalAmount, mapItemAmount } from '../../data/usecases'
+import { Amount, Item } from '../../domain/models'
 import { fsReadJSONFileSyncAdapter } from '../../infra/file-system-storage/fs/fs-read-file-adapter'
+import { pathGeneratorAdapter } from '../../infra/file-system-storage/path/path-generator-adapter'
 import { roundingFloor } from '../../utils/math/roundings/floor'
 import { sumReducer } from '../../utils/reducers'
-import { createPaymentMap } from './create-payment-map'
-import { fixAmountByCustomer } from './fix-amount-by-customer'
-import { fixAmountSumStrategy } from './fix-amount-sum-strategy'
-import { getAmountByCostumer } from './get-amount-by-costumer'
-import { getCustomersAmount } from './get-customers-amount'
-import { getTotalAmount } from './get-total-amount'
-import { mapItemAmount } from './map-item-amount'
-import { Item } from '../../domain/models'
-import { pathGeneratorAdapter } from '../../infra/file-system-storage/path/path-generator-adapter'
 
-export const calculatePaymentAmountByCustomer = (): Object => {
+export const getDataAmountCalculated = (): Amount => {
   const emailsPath = pathGeneratorAdapter('../../../data/emails.json', __dirname)
   const emails = fsReadJSONFileSyncAdapter<string []>(emailsPath)
   const itemsPath = pathGeneratorAdapter('../../../data/items.json', __dirname)

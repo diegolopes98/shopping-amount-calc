@@ -1,6 +1,6 @@
-import { calculatePaymentAmountByCustomer } from '../../data/usecases/calculate-payment-amount-by-customer'
+import { getDataAmountCalculated } from '../../presentation/presenter/get-data-amount-calculated'
 
 export const calculate = (): void => {
   console.log('The results are:')
-  console.log(calculatePaymentAmountByCustomer())
+  console.log(getDataAmountCalculated())
 }
