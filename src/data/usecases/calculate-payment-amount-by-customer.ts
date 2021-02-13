@@ -8,12 +8,14 @@ import { getAmountByCostumer } from './get-amount-by-costumer'
 import { getCustomersAmount } from './get-customers-amount'
 import { getTotalAmount } from './get-total-amount'
 import { mapItemAmount } from './map-item-amount'
-import path from 'path'
 import { Item } from '../../domain/models'
+import { pathGeneratorAdapter } from '../../infra/file-system-storage/path/path-generator-adapter'
 
 export const calculatePaymentAmountByCustomer = (): Object => {
-  const emails = fsReadJSONFileSyncAdapter<string []>(`${path.join(`${__dirname}`, '..', '..', '..', 'data', 'emails.json')}`)
-  const items = fsReadJSONFileSyncAdapter<Item []>(`${path.join(`${__dirname}`, '..', '..', '..', 'data', 'items.json')}`)
+  const emailsPath = pathGeneratorAdapter('../../../data/emails.json', __dirname)
+  const emails = fsReadJSONFileSyncAdapter<string []>(emailsPath)
+  const itemsPath = pathGeneratorAdapter('../../../data/items.json', __dirname)
+  const items = fsReadJSONFileSyncAdapter<Item []>(itemsPath)
   const customersAmount = getCustomersAmount(emails)
   const totalAmount = getTotalAmount(items, mapItemAmount, sumReducer)
   const amountByCustomer = getAmountByCostumer(totalAmount, customersAmount, roundingFloor)
