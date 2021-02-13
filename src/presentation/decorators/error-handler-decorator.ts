@@ -1,4 +1,4 @@
-export const errorHandler = <T>(functionToCall: (...args: any[]) => T, ...args: any[]): T => {
+export const errorHandlerDecorator = <T>(functionToCall: (...args: any[]) => T, ...args: any[]): T => {
   try {
     return functionToCall(...args)
   } catch (error) {
