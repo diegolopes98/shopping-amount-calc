@@ -5,4 +5,7 @@ const pathGenerator = (joinFn: (...paths: string[]) => string, relativePath: str
   return joinFn(dirname, ...pathAsArray)
 }
 
-export const pathGeneratorAdapter = (relativePath: string, dirname: string): string => pathGenerator(join, relativePath, dirname)
+export const pathGeneratorAdapter = (
+  relativePath: string,
+  dirname: string
+): string => pathGenerator(join, relativePath, dirname)
