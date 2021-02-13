@@ -1,3 +1,3 @@
-import { run } from './main/app'
+import { run } from './main/config/app'
 
 run()
