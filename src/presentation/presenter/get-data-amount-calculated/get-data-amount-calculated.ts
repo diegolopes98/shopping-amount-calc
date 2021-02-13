@@ -9,14 +9,16 @@ export const getDataAmountCalculatedPresenter = (
 ): Amount => {
   const emails = getEmailsData()
   if (!emails || emails.length === 0) {
-    console.error('Emails file was empty...')
+    console.error('Emails list was empty...')
     return null
   }
+
   const items = getItemsData()
   if (!items || items.length === 0) {
-    console.error('Items file was empty...')
+    console.error('Items list was empty...')
     return null
   }
+
   const customersAmount = getCustomersAmount(emails)
   const totalAmount = getTotalAmount(items, mapItemAmount, sumReducer)
   const amountByCustomer = getAmountByCostumer(totalAmount, customersAmount, roundingFloor)
