@@ -1,6 +1,6 @@
 import { createPaymentMap, fixAmountByCustomer, fixAmountSumStrategy, getAmountByCostumer, getCustomersAmount, getTotalAmount, mapItemAmount } from './helpers'
 import { Amount, Item } from '../../protocols'
-import { roundingFloor } from '../../../utils/math/roundings/floor'
+import { roundingFloor } from '../../../utils/math/roundings'
 import { sumReducer } from '../../../utils/reducers'
 import { isFloat } from '../../../utils/math/check-types'
 
