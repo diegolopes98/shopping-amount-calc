@@ -1,3 +1,3 @@
 import { Item } from '../../../protocols'
 
-export const mapItemAmount = (item: Item): number => item.amount * item.quantity
+export const mapItemAmount = (item: Item): number => item.price * item.quantity

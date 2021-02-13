@@ -20,10 +20,10 @@ export const getDataAmountCalculatedPresenter = (
     return null
   }
 
-  const hasFloat = items.map((item: Item) => item.amount).findIndex(isFloat) > 0
+  const hasFloat = items.map((item: Item) => item.price).findIndex(isFloat) > 0
 
   if (hasFloat) {
-    console.error('Items list has float numbers in amount...')
+    console.error('Items list has float numbers in price...')
     return null
   }
 
