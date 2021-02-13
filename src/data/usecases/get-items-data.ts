@@ -1,4 +1,4 @@
-import { Item } from '../../domain/models'
+import { Item } from '../protocols'
 
 export const getItemsData = (
   pathGeneratorAdapter: (relativePath: string, dirname: string) => string,
