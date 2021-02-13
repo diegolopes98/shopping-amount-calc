@@ -1,6 +1,8 @@
-import { calculate } from '../../presentation/cli/calculate'
-import { intro } from '../../presentation/cli/intro'
+import { showResults } from '../cli/showResults'
+import { intro } from '../cli/intro'
+import { getDataAmountCalculatedFactory } from '../factories/presenter/get-data-amount-calculated-factory'
 
 export const run = (): void => {
-  intro(calculate)
+  intro()
+  showResults(getDataAmountCalculatedFactory())
 }

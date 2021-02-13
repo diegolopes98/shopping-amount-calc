@@ -3,7 +3,7 @@ import { Amount } from '../../protocols'
 import { roundingFloor } from '../../../utils/math/roundings/floor'
 import { sumReducer } from '../../../utils/reducers'
 
-export const getDataAmountCalculated = (
+export const getDataAmountCalculatedPresenter = (
   getEmailsData,
   getItemsData
 ): Amount => {
