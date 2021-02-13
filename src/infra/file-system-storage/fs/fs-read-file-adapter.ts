@@ -8,6 +8,6 @@ const fsReadJSONFileSync = (
   return jsonParser(readFileSync(path, { encoding: 'utf-8' }))
 }
 
-export const fsReadJSONFileSyncAdapter = (path: string): Object => {
-  return fsReadJSONFileSync(fs.readFileSync, JSON.parse, path)
+export const fsReadJSONFileSyncAdapter = <T>(path: string): T => {
+  return fsReadJSONFileSync(fs.readFileSync, JSON.parse, path) as T
 }
