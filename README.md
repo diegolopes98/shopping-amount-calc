@@ -2,7 +2,7 @@
 
 ## Description
 This app reads the files **emails.json** and **items.json** put into the resources folder that's located in
-the project root, then return a map with the amount of item's price divided between the emails (the
+the project root, then return a map with the amount of the item's prices divided between the emails (the
 customers).  
 
 ## Usage
