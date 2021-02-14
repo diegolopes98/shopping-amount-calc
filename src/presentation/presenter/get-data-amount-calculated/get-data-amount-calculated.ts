@@ -4,6 +4,10 @@ import { roundingFloor } from '../../../utils/math/roundings'
 import { sumReducer } from '../../../utils/reducers'
 import { isFloat } from '../../../utils/math/check-types'
 
+/**
+ * @param {function}  getEmailsData   UseCase Function that returns the emails in the resource folder.
+ * @param {function}  getItemsData    UseCase Function that returns the items in the resource folder.
+ */
 export const getDataAmountCalculatedPresenter = (
   getEmailsData: () => string[],
   getItemsData: () => Item[]
