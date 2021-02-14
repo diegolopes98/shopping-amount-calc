@@ -1,8 +1,9 @@
-import { createPaymentMap, fixAmountByCustomer, fixAmountSumStrategy, getAmountByCostumer, getCustomersAmount, getTotalAmount, mapItemPrice } from './helpers'
+import { createPaymentMap, fixAmountByCustomer, fixAmountSumStrategy, getAmountByCostumer, getTotalAmount, mapItemPrice } from './helpers'
 import { Amount, Item } from '../../protocols'
 import { roundingFloor } from '../../../utils/math/roundings'
 import { sumReducer } from '../../../utils/reducers'
 import { isFloat } from '../../../utils/math/check-types'
+import { getLength } from '../../../utils/array/get-length'
 
 /**
  * @param {function}  getEmailsData   UseCase Function that returns the emails in the resource folder.
@@ -31,7 +32,7 @@ export const getDataAmountCalculatedPresenter = (
     return null
   }
 
-  const customersAmount = getCustomersAmount(emails)
+  const customersAmount = getLength(emails)
   const totalAmount = getTotalAmount(items, mapItemPrice, sumReducer)
   const amountByCustomer = getAmountByCostumer(totalAmount, customersAmount, roundingFloor)
   const amountByCustomerFixed = fixAmountByCustomer(amountByCustomer, customersAmount, totalAmount, sumReducer, fixAmountSumStrategy)
