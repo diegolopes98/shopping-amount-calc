@@ -59,3 +59,12 @@ If you have put the files into the resources folder in the right format you shou
 *Note: The result is a map with the email as a string key and the value is the amount by customer*  
 *Note 2: The cents are divided to be most equaly possible and not be a repeating decimal*  
 *Note 3: The values are treated as integer, wich means that 100 is 1,00 in the currency*  
+
+## Development
+
+For development guides you should visit [here](docs/development.md)
+
+## To Do List
+
+- Implement unit tests
+- Refactor presentation helpers (maybe some helpers could by usecases)
