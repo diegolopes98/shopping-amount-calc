@@ -28,7 +28,7 @@ const makeSut = (
   )
 }
 
-describe('UseCase: getEmailsData', () => {
+describe('UseCase: getItemsData', () => {
   test('Should throw if pathGenerator throws', () => {
     const sut = makeSut(
       jest.fn((s: string) => { throw new Error('path_generator_error') }),
