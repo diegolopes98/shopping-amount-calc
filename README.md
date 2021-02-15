@@ -64,7 +64,8 @@ If you have put the files into the resources folder in the right format you shou
 
 For development guides you should visit [here](docs/development.md)
 
-## To Do List
+## ToDo List
 
-- Implement unit tests
+- Implement unit tests to presentation layer
+- Add integration tests to main layer
 - Refactor presentation helpers (maybe some helpers could by usecases)
