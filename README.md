@@ -68,4 +68,4 @@ For development guides you should visit [here](docs/development.md)
 
 - Implement unit tests to presentation layer
 - Add integration tests to main layer
-- Refactor presentation helpers (maybe some helpers could by usecases)
+- Refactor presentation helpers (maybe some helpers could be usecases)
