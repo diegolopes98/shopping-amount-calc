@@ -4,6 +4,7 @@ import { roundingFloor } from '../../../utils/math/roundings'
 import { sumReducer } from '../../../utils/reducers'
 import { isFloat } from '../../../utils/math/check-types'
 import { getLength } from '../../../utils/array'
+import { isString } from '../../../utils/string/check-types'
 
 /**
  * @param {function}  getEmailsData   UseCase Function that returns the emails in the resource folder.
@@ -22,6 +23,13 @@ export const getDataAmountCalculatedPresenter = (
   const items = getItemsData()
   if (!items || items.length === 0) {
     console.error('Items list was empty...')
+    return null
+  }
+
+  const hasString = items.map((item: Item) => item.price).findIndex(isString) > 0
+
+  if (hasString) {
+    console.error('Items list has string types in price...')
     return null
   }
 
