@@ -3,7 +3,7 @@ import { Amount, Item } from '../../protocols'
 import { roundingFloor } from '../../../utils/math/roundings'
 import { sumReducer } from '../../../utils/reducers'
 import { isFloat } from '../../../utils/math/check-types'
-import { getLength } from '../../../utils/array/get-length'
+import { getLength } from '../../../utils/array'
 
 /**
  * @param {function}  getEmailsData   UseCase Function that returns the emails in the resource folder.
