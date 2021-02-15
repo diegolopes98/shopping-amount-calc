@@ -1,4 +1,4 @@
-import { Item } from '../protocols'
+import { Item } from '../../protocols'
 
 /**
  * @param {function} pathGeneratorAdapter           Function to generate the path, receives a string as a
